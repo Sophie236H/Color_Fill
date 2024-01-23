@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<style>
+  table,
+  td,
+  tr {
+    border: 1px solid black;
+  }
+
+  table {
+    width: 70%;
+  }
+
+  tr {
+    height: 30px;
+  }
+</style>
+
+<head>
+  <!-- Give your game / page a title! -->
+  <title>Play Color Fill</title>
+  <link rel="icon" type="image/x-icon"
+    href="https://images.vexels.com/media/users/3/189550/isolated/preview/5931dd33fd082c85db78e9ee017076a6-3d-building-blocks.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <!-- This will load the script file AFTER the document is loaded -->
+  <script src="script.js" defer></script>
+
+</head>
+<br>
+
+<body style="background-color:aliceblue;">
+  <table style="width:30%; height:10px;" id=table1>
+    <tr>
+      <center>
+        <td style="background-color: skyblue;"> Player 1</td>
+      </center>
+      <td style="background-color: lightgreen;"> Player 2</td>
+    </tr>
+    <tr>
+      <td id=playerone></td>
+      <td id=playertwo></td>
+    </tr>
+  </table>
+  <table style="width:40%; height:15px; position:absolute; right:20%; top:48px" id="table2">
+    <tr>
+      <td style="background-color:deepskyblue" ; id="deepskyblueclick"></td>
+      <td style="background-color:mediumpurple" ; id="mediumpurpleclick"></td>
+      <td style="background-color:yellowgreen" ; id="yellowgreenclick"></td>
+      <td style="background-color:orange" ; id="orangeclick"></td>
+      <td style="background-color:pink" ; id=pinkclick></td>
+      <td style="background-color:orangered" ; id="orangered"></td>
+    </tr>
+  </table>
+  <div style = "position: absolute; right: 38%; top: 14%;" id = "selectacolor"> - Select A Color -</div>
+  <br>
+  <!--This is the start of the main table-->
+  <center>
+    <table id="bigtable">
+      <tr>
+        <td id="1:1"></td>
+        <td id=1:2></td>
+        <td id="1:3"></td>
+        <td id="1:4"></td>
+        <td id="1:5"></td>
+        <td id="1:6"></td>
+        <td id="1:7"></td>
+        <td id="1:8"></td>
+        <td id="1:9"></td>
+        <td id="1:10"></td>
+        <td id="1:11"></td>
+        <td id="1:12"></td>
+        <td id="1:13"></td>
+        <td id="1:14"></td>
+        <td id="1:15"></td>
+      </tr>
+      <tr>
+        <td id=2:1></td>
+        <td id=2:2></td>
+        <td id=2:3></td>
+        <td id=2:4></td>
+        <td id=2:5></td>
+        <td id=2:6></td>
+        <td id=2:7></td>
+        <td id=2:8></td>
+        <td id=2:9></td>
+        <td id=2:10></td>
+        <td id=2:11></td>
+        <td id=2:12></td>
+        <td id=2:13></td>
+        <td id=2:14></td>
+        <td id=2:15></td>
+      </tr>
+      <tr>
+        <td id=3:1></td>
+        <td id=3:2></td>
+        <td id=3:3></td>
+        <td id=3:4></td>
+        <td id=3:5></td>
+        <td id=3:6></td>
+        <td id=3:7></td>
+        <td id=3:8></td>
+        <td id=3:9></td>
+        <td id=3:10></td>
+        <td id=3:11></td>
+        <td id=3:12></td>
+        <td id=3:13></td>
+        <td id=3:14></td>
+        <td id=3:15></td>
+      </tr>
+      <tr>
+        <td id=4:1></td>
+        <td id=4:2></td>
+        <td id=4:3></td>
+        <td id=4:4></td>
+        <td id=4:5></td>
+        <td id=4:6></td>
+        <td id=4:7></td>
+        <td id=4:8></td>
+        <td id=4:9></td>
+        <td id=4:10></td>
+        <td id=4:11></td>
+        <td id=4:12></td>
+        <td id=4:13></td>
+        <td id=4:14></td>
+        <td id=4:15></td>
+      </tr>
+      <tr>
+        <td id=5:1></td>
+        <td id=5:2></td>
+        <td id=5:3></td>
+        <td id=5:4></td>
+        <td id=5:5></td>
+        <td id=5:6></td>
+        <td id=5:7></td>
+        <td id=5:8></td>
+        <td id=5:9></td>
+        <td id=5:10></td>
+        <td id=5:11></td>
+        <td id=5:12></td>
+        <td id=5:13></td>
+        <td id=5:14></td>
+        <td id=5:15></td>
+      </tr>
+      <tr>
+        <td id=6:1></td>
+        <td id=6:2></td>
+        <td id=6:3></td>
+        <td id=6:4></td>
+        <td id=6:5></td>
+        <td id=6:6></td>
+        <td id=6:7></td>
+        <td id=6:8></td>
+        <td id=6:9></td>
+        <td id=6:10></td>
+        <td id=6:11></td>
+        <td id=6:12></td>
+        <td id=6:13></td>
+        <td id=6:14></td>
+        <td id=6:15></td>
+      </tr>
+      <tr>
+        <td id=7:1></td>
+        <td id=7:2></td>
+        <td id=7:3></td>
+        <td id=7:4></td>
+        <td id=7:5></td>
+        <td id=7:6></td>
+        <td id=7:7></td>
+        <td id=7:8></td>
+        <td id=7:9></td>
+        <td id=7:10></td>
+        <td id=7:11></td>
+        <td id=7:12></td>
+        <td id=7:13></td>
+        <td id=7:14></td>
+        <td id=7:15></td>
+      </tr>
+      <tr>
+        <td id=8:1></td>
+        <td id=8:2></td>
+        <td id=8:3></td>
+        <td id=8:4></td>
+        <td id=8:5></td>
+        <td id=8:6></td>
+        <td id=8:7></td>
+        <td id=8:8></td>
+        <td id=8:9></td>
+        <td id=8:10></td>
+        <td id=8:11></td>
+        <td id=8:12></td>
+        <td id=8:13></td>
+        <td id=8:14></td>
+        <td id=8:15></td>
+      </tr>
+      <tr>
+        <td id=9:1></td>
+        <td id=9:2></td>
+        <td id=9:3></td>
+        <td id=9:4></td>
+        <td id=9:5></td>
+        <td id=9:6></td>
+        <td id=9:7></td>
+        <td id=9:8></td>
+        <td id=9:9></td>
+        <td id=9:10></td>
+        <td id=9:11></td>
+        <td id=9:12></td>
+        <td id=9:13></td>
+        <td id=9:14></td>
+        <td id=9:15></td>
+      </tr>
+      <tr>
+        <td id=10:1></td>
+        <td id=10:2></td>
+        <td id=10:3></td>
+        <td id=10:4></td>
+        <td id=10:5></td>
+        <td id=10:6></td>
+        <td id=10:7></td>
+        <td id=10:8></td>
+        <td id=10:9></td>
+        <td id=10:10></td>
+        <td id=10:11></td>
+        <td id=10:12></td>
+        <td id=10:13></td>
+        <td id=10:14></td>
+        <td id=10:15></td>
+      </tr>
+      <tr>
+        <td id=11:1></td>
+        <td id=11:2></td>
+        <td id=11:3></td>
+        <td id=11:4></td>
+        <td id=11:5></td>
+        <td id=11:6></td>
+        <td id=11:7></td>
+        <td id=11:8></td>
+        <td id=11:9></td>
+        <td id=11:10></td>
+        <td id=11:11></td>
+        <td id=11:12></td>
+        <td id=11:13></td>
+        <td id=11:14></td>
+        <td id=11:15></td>
+      </tr>
+      <tr>
+        <td id=12:1></td>
+        <td id=12:2></td>
+        <td id=12:3></td>
+        <td id=12:4></td>
+        <td id=12:5></td>
+        <td id=12:6></td>
+        <td id=12:7></td>
+        <td id=12:8></td>
+        <td id=12:9></td>
+        <td id=12:10></td>
+        <td id=12:11></td>
+        <td id=12:12></td>
+        <td id=12:13></td>
+        <td id=12:14></td>
+        <td id=12:15></td>
+      </tr>
+      <tr>
+        <td id=13:1></td>
+        <td id=13:2></td>
+        <td id=13:3></td>
+        <td id=13:4></td>
+        <td id=13:5></td>
+        <td id=13:6></td>
+        <td id=13:7></td>
+        <td id=13:8></td>
+        <td id=13:9></td>
+        <td id=13:10></td>
+        <td id=13:11></td>
+        <td id=13:12></td>
+        <td id=13:13></td>
+        <td id=13:14></td>
+        <td id=13:15></td>
+      </tr>
+      <tr>
+        <td id=14:1></td>
+        <td id=14:2></td>
+        <td id=14:3></td>
+        <td id=14:4></td>
+        <td id=14:5></td>
+        <td id=14:6></td>
+        <td id=14:7></td>
+        <td id=14:8></td>
+        <td id=14:9></td>
+        <td id=14:10></td>
+        <td id=14:11></td>
+        <td id=14:12></td>
+        <td id=14:13></td>
+        <td id=14:14></td>
+        <td id=14:15></td>
+      </tr>
+      <tr>
+        <td id=15:1></td>
+        <td id=15:2></td>
+        <td id=15:3></td>
+        <td id=15:4></td>
+        <td id=15:5></td>
+        <td id=15:6></td>
+        <td id=15:7></td>
+        <td id=15:8></td>
+        <td id=15:9></td>
+        <td id=15:10></td>
+        <td id=15:11></td>
+        <td id=15:12></td>
+        <td id=15:13></td>
+        <td id=15:14></td>
+        <td id=15:15></td>
+      </tr>
+    </table>
+  </center>
+  <br>
+  <div style="position:absolute; left: 6%; top: 600px; font-size: 12px;" id=div1> Player One starts here<br>(botton left
+    corner)</div>
+  <div style="position:absolute; right: 6%; top: 82px; font-size: 12px;" id=div2> Player 2 starts here<br>(top right
+    corner)</div>
+  <center><a href="index.html"><button id="Backtomainmenu"
+        style="font-family: 'Times New Roman', Times, serif;font-size:38px;">Main Menu</button></a> <a
+      href="https://7ed802f9-d1d6-4685-b779-04586786499c-00-32h5v3nzry379.riker.replit.dev/Gameboard.html"><button
+        style="font-family: 'Times New Roman', Times, serif;font-size:38px;">New Game</button></a></center>
+
+  <div style="position:absolute; left: 2%; top: 300px; font-size: 20px;" id="playerturn1"><mark
+      style="background-color: skyblue;">Player One's Turn</mark></div>
+  <div style="position:absolute; right: 2%; top: 300px; font-size: 20px;" id="playerturn2"><mark
+      style="background-color: lightgreen;">Player Two's Turn</mark></div>
+
+  <div style="font-size: 70px; font-family: 'Times New Roman', Times, serif;" id="win1">
+    <center><mark style = "background-color: skyblue;">Player One Wins!</mark></center>
+  </div>
+  <div style="font-size: 70px; font-family: 'Times New Roman', Times, serif;" id="win2">
+    <center><mark style = "background-color: lightgreen;">Player Two Wins!</mark></center>
+  </div>
+  <div style="font-size: 70px; backround-color: lightgreen; font-family: 'Times New Roman', Times, serif;" id="tie">
+    <center>It's A Tie!</center>
+  </div>
+</body>
+
+
+</html>
